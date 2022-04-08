@@ -13,9 +13,12 @@ if (isset($_SESSION['login'])) {
 		<p>
 	<?php
 	if (!empty($_SESSION['cart']["arrCart"])){
+		
+		// jumlah data
+		$jumlah = count($_SESSION['cart']["arrCart"]);
 
-		echo "Jumlah data :".sizeof($_SESSION['cart']['arrCart']).
-			 "<br /> <a href=cart-remove.php>Kosongkan Cart</a><br />
+		echo "Jumlah data : ".$jumlah-1;
+		echo "<br /> <a href=cart-remove.php>Kosongkan Cart</a><br />
 			 kembali ke <a href='list-product.php'>List Product</a><br />
 			 <br />";
 		
